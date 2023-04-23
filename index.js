@@ -4,6 +4,9 @@ import "./DataConnect/ConnectData.js"
 import UserRouter from "./Routes/Router.js"
 import NoteRouter from "./Routes/NoteRoute.js"
 
+import dot from "dotenv"
+const dotenv = dot.config()
+
 
 const app = express()
 
@@ -24,5 +27,5 @@ app.get("/" , (req,res)=>{
 })
 
 app.listen( process.env.PORT || 8009 , ()=>{
-    console.log(`server sucessfullt run at :${PORT}`)
+    console.log(`server sucessfullt run at :8009`)
 })
