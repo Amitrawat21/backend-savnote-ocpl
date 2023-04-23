@@ -23,7 +23,6 @@ app.get("/" , (req,res)=>{
     res.send("hello")
 })
 
-const PORT = 8009
-app.listen(PORT , ()=>{
+app.listen( process.env.PORT || 8009 , ()=>{
     console.log(`server sucessfullt run at :${PORT}`)
 })
