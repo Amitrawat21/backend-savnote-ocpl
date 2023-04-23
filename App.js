@@ -19,6 +19,9 @@ app.use(express.urlencoded({extended : true}))
 app.use("/user" , UserRouter )
 
 app.use("/note" , NoteRouter)
+app.get("/" , (req,res)=>{
+    res.send("hello")
+})
 
 const PORT = 8009
 app.listen(PORT , ()=>{
